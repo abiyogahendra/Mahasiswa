@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 // }
 // );
   
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    // Route::get('/', function () {
+    //     return view('welcome');
+    // });
 
     Route::get('/data_admin','DataController@LoadingPage')->name('mahasiswa');
 
@@ -36,6 +36,6 @@ use Illuminate\Support\Facades\Route;
             Route::post('/tambah_nilai','TambahNilaiController@tambah_nilai');
             Route::get('/tambah_nilai/{id}','TambahNilaiController@nilai_delete')->name('nilai_delete');
 
-Route::get('/admin','AdminController@Login')->name('Login');
+Route::get('/','AdminController@Login')->name('Login');
 Route::get('logout','AdminController@logout')->name('logout');
-Route::post('/admin','OperasionalController@LoginAdmin');
+Route::post('/','OperasionalController@LoginAdmin');

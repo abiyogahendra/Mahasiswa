@@ -42,7 +42,7 @@
     </div>
                   <div align="center" class="container mt-5 center">
                         {{-- Pagination --}}
-                        <div class="d-flex justify-content-center">
+                        <div class="pagination justify-content-center">
                               {!! $data ->links() !!}
                         </div>     
                   </div>
