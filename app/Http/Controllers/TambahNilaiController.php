@@ -48,7 +48,7 @@ class TambahNilaiController extends Controller {
     }
 
     public function nilai_delete(Request $request, $id){
-        $dataNilai = Promo::where('id_nilai','=', $id)->first();
+        $dataNilai = Nilai::where('id_nilai','=', $id)->first();
 
         $dataYhapus = [
             'id_nilai'      => $request->matakuliah,

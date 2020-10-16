@@ -18,7 +18,13 @@
                             <tr>
                                 <td>Matakuliah</td>
                                 <td>:</td>
-                                <td><input type="text" name="matakuliah" placeholder="Masukkan Matakuliah"/></td>
+                                <td><select name="matakuliah" id="" placeholder="Masukkan Matakuliah">
+                                        <option value="Perakitan Komputer">Perakitan Komputer</option>
+                                        <option value="Pemrograman Web">Pemrograman Web</option>
+                                        <option value="Pemrograman Shell">Pemrograman Shell</option>
+                                        <option value="Multimedia">Multimedia</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Nilai</td>

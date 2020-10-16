@@ -45,7 +45,7 @@ class OperasionalController extends Controller {
 
             
         if (Auth::attempt($credentials)) {
-           return redirect()->route('show_data');  
+           return redirect()->route('mahasiswa');  
             
         }else{
            return response()->json([
@@ -64,13 +64,13 @@ class OperasionalController extends Controller {
             'kelas'         => $request->kelas,
             'foto'          => $request->foto,
         ];
-        //dd($request->nim);
+        // dd(Nilai::where('nim','=',$dataMahasiswa));
         $dataNhapus = [
             'id_nilai'      => $request->matakuliah,
             'nilai'         => $request->nilai,            
         ];
 
-        $delete1 = Nilai::where('nim','=', $request->nim)->delete($dataNhapus);
+        $delete1 = Nilai::where('nim','=', $dataMahasiswa->nim)->delete($dataNhapus);
         $delete2 = Mahasiswa::where('id','=', $id)->delete($dataYhapus);
         return redirect()->route('mahasiswa');
     }

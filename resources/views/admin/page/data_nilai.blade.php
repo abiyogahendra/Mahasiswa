@@ -8,7 +8,6 @@
           <table  class="col-8 table align-center" border=1> 
                 <thead style="text-align:center" class="thead-dark">
                       <tr>
-                          <th>Id Nilai</th>
                           <th>Nim</th>
                           <th>Nama</th>
                           <th>Matakuliah</th>
@@ -18,8 +17,7 @@
                 </thead>
 
                   @foreach($data as $dataNilai)
-                  <tr>
-                        <td>{{$dataNilai->id_nilai}}</td>
+                  <tr style="text-align:center">
                         <td>{{$dataNilai->Mahasiswa['nim']}}</td>
                         <td>{{$dataNilai->Mahasiswa['nama']}}</td>
                         <td>{{$dataNilai->matakuliah}}</td>
@@ -36,7 +34,16 @@
                   </tr>
                   @endforeach
           </table>
-    </div>
+          <br>
+          <br>
+                   
+            
 
-    
+    </div>
+                  <div align="center" class="container mt-5 center">
+                        {{-- Pagination --}}
+                        <div class="d-flex justify-content-center">
+                              {!! $data ->links() !!}
+                        </div>     
+                  </div>
  @endsection

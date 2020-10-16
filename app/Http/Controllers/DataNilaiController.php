@@ -10,9 +10,10 @@ use Validator;
 class DataNilaiController extends Controller
 {
     public function index(){
-        $dataNilai = Nilai::all();
+        $dataNilai = Nilai::paginate(10);
         //dd($dataNilai->toArray());
         return view('admin.page.data_Nilai')
+            //->withPagination(10)
             ->withData($dataNilai)    
         ;
     }

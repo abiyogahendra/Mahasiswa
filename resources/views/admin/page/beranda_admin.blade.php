@@ -8,10 +8,9 @@
           <table  class="col-8 table align-center" border=1> 
                 <thead style="text-align:center" class="thead-dark">
                       <tr>
-                          <th>Id</th>
+                          <th>NIM</th>    
                           <th>Nama</th>
                           <th>Email</th>
-                          <th>NIM</th>
                           <th>Kelas</th>
                           <th>Foto</th>
                           <th>Edit</th>
@@ -19,11 +18,10 @@
                 </thead>
 
                   @foreach($data as $dataMahasiswa)
-                  <tr>
-                        <td>{{$dataMahasiswa->id}}</td>
+                  <tr>                        
+                        <td>{{$dataMahasiswa->nim}}</td>
                         <td>{{$dataMahasiswa->nama}}</td>
                         <td>{{$dataMahasiswa->email}}</td>
-                        <td>{{$dataMahasiswa->nim}}</td>
                         <td>{{$dataMahasiswa->kelas}}</td>
                         <td style="text-align:center"><img src="{{('../storage/gambar/mahasiswa/' . $dataMahasiswa->foto)}}" height="100px" width="70px;" alt=""></td>
                         <td style="text-align:center">
